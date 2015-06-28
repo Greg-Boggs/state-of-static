@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>The State of Static</title>
+
+<!-- Don't alter this, CSSS needs it to work -->
+<link href="slideshow.css" rel="stylesheet" />
+
+<!-- Theme-specific styles go here (themes can be reused in multiple talks) -->
+<link href="theme.css" rel="stylesheet" />
+
+<!-- Talk-specific styles go here -->
+<link href="talk.css" rel="stylesheet" />
+
+<!-- Take care of prefixes -->
+<script src="prefixfree.min.js"></script>
+
+</head>
+<body data-duration="144000">
+
+<header id="intro" class="slide">
+	<h1>The State of Static</h1>
+
+    <p>Not just for prototypes anymore.</p>
+
+    <p><a href="http://www.gregboggs.com/ ">http://www.gregboggs.com/</a> - @gregory_boggs</p>
+    <p>Conference hashtag: <a href="https://twitter.com/hashtag/devsigner?src=hash">#devsigner</a></p>
+    <p>Session evaluation: <a href="http://devsignercon.com/eval">devsignercon.com/eval</a></p>
+	<p class="attribution">By Greg Boggs</p>
+</header>
+
+<section>
+    <header class="slide">
+        <h1>What are some problems when building websites with WordPress or Drupal?</h1>
+    </header>
+
+    <section class="slide">
+        <h2>Lets make a list!</h2>
+        <p class="delayed">No really, please help!</p>
+    </section>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>What is a static website?</h1>
+	</header>
+	
+	<section class="slide">
+		<h2>Static Website Generator</h2>
+        <p>A static generator does the building when you create your content. Write once. Read many times.
+            <a href="http://gohugo.io/overview/introduction/">Learn More ></a>
+        </p>
+        <p>A generator you may have heard of is called <a href="http://jekyllrb.com/">Jekyll</a>. I like <a href="http://gohugo.io/">Hugo</a>.
+            It's like WordPress. Except it's fast, won't be hacked, and doesn't need security updates.</p>
+        <p>We seriously need to <a href="https://en.wikipedia.org/wiki/Static_web_page">update Wikipedia</a>.</p>
+	</section>
+</section>
+
+<section>
+    <section class="slide">
+        <h2>Static Advantages</h2>
+        <ul>
+            <li class="delayed">Very, very fast</li>
+            <li class="delayed">Extremely secure</li>
+            <li class="delayed">Efficient to develop with</li>
+            <li class="delayed">Easy to learn</li>
+            <li class="delayed">Easy to edit</li>
+            <li class="delayed">Easy to host</li>
+        </ul>
+    </section>
+</section>
+<section>
+    <header class="slide">
+        <h1>Let's define the common pieces.</h1>
+    </header>
+
+    <section class="slide">
+        <ul>
+            <li>Markdown, Markdown, Markdown <a href="http://daringfireball.net/projects/markdown/">More ></a></li>
+            <li class="delayed">Git version control</li>
+            <li class="delayed">Metadata usually in Yaml. <code>author: Greg Boggs</code></li>
+            <li class="delayed">Plain HTML files, just like 1997, but without the capslock.</li>
+            <li class="delayed">A template language like Twig, Mustache, or Slim*</li>
+            <li class="delayed">Command line tools</li>
+            <li class="delayed">Free, open-source software</li>
+        </ul>
+        <p class="delayed">* Thanks Marlene!</p>
+    </section>
+</section>
+<section>
+    <header class="slide">
+        <h1>Ok, let's look at some code.</h1>
+    </header>
+
+    <section class="slide">
+        <p>Print variables:</p>
+        <code>{{ .Site.Params.Author }}</code>
+        <p>Use conditions:</p>
+        <code>{{ if ne .Description "" }}{{ .Description }}{{end}}</code>
+        <p>Repeat yourself:</p>
+        <code>	{{ range first 5 .Site.Recent }}</code>
+    </section>
+</section>
+
+<section>
+    <header class="slide">
+        <h1>Static websites are for prototypes.</h1>
+    </header>
+
+    <section class="slide">
+        <p>Sure, blogs are easy - comments, pagination, archives...</p>
+        <p>What else you got?</p>
+        <ul>
+            <li class="delayed">Great site search with <a href="http://lunrjs.com/">Lunr</a>.</li>
+            <li class="delayed">Quick and easy forms with <a href="http://formspree.io/">Formspree</a>.</li>
+            <li class="delayed">Event calendar with <a href="http://fullcalendar.io/">FullCalendar</a>.</li>
+            <li class="delayed">Yes, even commerce with <a href="http://simplecartjs.org/">simpleCart</a>.</li>
+            <li class="delayed">Content modelling "CMS" with <a href="https://www.contentful.com/">Contentful</a>.</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h2>So, when should I use a CMS?</h2>
+        <p>Logged in websites</p>
+        <p>User generated content</p>
+        <p>Websites over 600,000 pages</p>
+    </section>
+</section>
+<footer class="slide">
+	<h2>Thank you!</h2>
+    <p>Conference hashtag: <a href="https://twitter.com/hashtag/devsigner?src=hash">#devsigner</a></p>
+    <p>Session evaluation: <a href="http://devsignercon.com/eval">devsignercon.com/eval</a></p>
+    <p class="attribution">
+        Static slides made possible by
+        <a href="http://lea.verou.me/2010/10/my-ft2010-slides-and-csss-my-presentation-framework/">Lea Verou</a>
+    </p>
+</footer>
+
+<script src="slideshow.js"></script>
+
+<!-- Uncomment the plugins you need
+<script src="plugins/css-edit.js"></script>
+<script src="plugins/css-snippets.js"></script>
+<script src="plugins/css-controls.js"></script>
+<script src="plugins/code-highlight.js"></script>
+-->
+<script>var slideshow = new SlideShow();</script>
+	
+</body>
+</html>
